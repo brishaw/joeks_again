@@ -1,0 +1,25 @@
+{
+  "name": "joeks_again",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brishaw/joeks_again.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brishaw/joeks_again/issues"
+  },
+  "homepage": "https://github.com/brishaw/joeks_again#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}
