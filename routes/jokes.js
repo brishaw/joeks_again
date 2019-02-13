@@ -13,7 +13,7 @@ jokeController.route('/test')
     });
   })
 
-  jokeController.route('/dadjoke')
+  jokeController.route('/dadjokes')
     .get((req, res) => {
       axios.get('https://icanhazdadjoke.com/', { 
         headers: {
@@ -74,7 +74,7 @@ jokeController.route('/chuckjoke')
       })
     })
 
-jokeController.route('/riddle')
+jokeController.route('/riddles')
   .get((req, res) => {
     let i = Math.floor((Math.random() * 47) + 1);
     axios.get('https://goodriddlesnow.com/riddles/by/funny-riddles/page:' + i + '/')
