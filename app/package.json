@@ -1,5 +1,6 @@
 {
   "name": "app",
+  "homepage": "https://brishaw.github.io/joeks_again/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
