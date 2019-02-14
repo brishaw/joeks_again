@@ -32,7 +32,7 @@ jokeController.route('/test')
         });
     })
 
-jokeController.route('/chuckjoke')
+jokeController.route('/chuckjokes')
   .get((req, res) => {
     axios.get('http://api.icndb.com/jokes/random')
       .then((response) => {

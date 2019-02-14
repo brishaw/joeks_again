@@ -19,7 +19,7 @@ class Dad extends Component {
 
   render() {
     return (
-      <div>
+      <div className="middle">
         <p>The Dad Jokes</p>
         <p>{this.state.question}</p>
       </div>

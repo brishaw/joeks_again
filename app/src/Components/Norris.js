@@ -8,7 +8,7 @@ class Norris extends Component {
   }
 
   componentDidMount() {
-    axios.get('/api/chuckjoke/')
+    axios.get('/api/chuckjokes/')
     .then(response => {
       console.log(response.data.joke);
       this.setState({
@@ -18,11 +18,30 @@ class Norris extends Component {
     .catch(error => console.log(error));
   }
 
+  
+    handleClick = (e) => {
+      e.preventDefault();
+      this.setState({
+        question: ''
+      })
+      
+      axios.get('/api/chuckjokes/')
+        .then(response => {
+          console.log(response.data.joke);
+          this.setState({
+            question: response.data.joke
+          })
+        })
+        .catch(error => console.log(error));
+    }
+  
+
   render() {
     return (
-      <div>
+      <div className="left">
         <p>Chuck Norris Jokes</p>
         <p>{this.state.question}</p>
+        <button className="joke-btn" onClick={this.handleClick} />
       </div>
     )
   }
