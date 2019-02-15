@@ -13,6 +13,10 @@ app.use(express.static("app/public"));
 
 app.use('/api', jokeController);
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("app/build"));
+}
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./app/public/index.html"));
 });
