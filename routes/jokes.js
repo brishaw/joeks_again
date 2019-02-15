@@ -34,7 +34,7 @@ jokeController.route('/test')
 
 jokeController.route('/chuckjokes')
   .get((req, res) => {
-    axios.get('https://api.icndb.com/jokes/random')
+    axios.get('http://api.icndb.com/jokes/random')
       .then((response) => {
         console.log(response.data.value.joke);
         res.json({
@@ -47,32 +47,32 @@ jokeController.route('/chuckjokes')
       })
   })
 
-  // jokeController.route('/funnyjoke')
-  //   .get((req, res) => {
-  //     let i = Math.floor((Math.random() * 35) + 1);
-  //     axios.get('http://www.laughfactory.com/jokes/clean-jokes/' + i + '/')
-  //       .then((response) => {
-  //         var $ = cheerio.load(response.data);
-  //         var results = [];
-  //         $("div.joke-text p").each(function (i, element) {
-  //           var title =$(element).text();
+  jokeController.route('/funnyjoke')
+    .get((req, res) => {
+      let i = Math.floor((Math.random() * 35) + 1);
+      axios.get('http://www.laughfactory.com/jokes/clean-jokes/' + i + '/')
+        .then((response) => {
+          var $ = cheerio.load(response.data);
+          var results = [];
+          $("div.joke-text p").each(function (i, element) {
+            var title =$(element).text();
 
-  //           results.push({
-  //             title: title
-  //           });
-  //         })
-  //         console.log(results);
-  //         //return results;
-  //         res.json({
-  //           jokes: results
-  //         })
+            results.push({
+              title: title
+            });
+          })
+          console.log(results);
+          //return results;
+          res.json({
+            jokes: results
+          })
 
-  //       })
-  //      .catch ((error) => {
-  //       console.log('Something is wrong with the GET request...');
-  //       console.log(error);
-  //     })
-  //   })
+        })
+       .catch ((error) => {
+        console.log('Something is wrong with the GET request...');
+        console.log(error);
+      })
+    })
 
 jokeController.route('/riddles')
   .get((req, res) => {
