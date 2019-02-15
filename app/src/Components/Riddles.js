@@ -42,7 +42,7 @@ class Riddles extends Component {
 
   render() {
     return (
-      <div className="right">
+      <div className="right box">
         <p>A Riddle</p>
         <p>{this.state.question}</p>
         <div className="riddle-answer-box"></div>

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './Styles/Norris.css';
+
 import axios from 'axios';
 
 class Norris extends Component {
@@ -38,8 +40,8 @@ class Norris extends Component {
 
   render() {
     return (
-      <div className="left">
-        <p>Chuck Norris Jokes</p>
+      <div className="left box">
+        <h3>Chuck Norris Jokes</h3>
         <p>{this.state.question}</p>
         <button className="joke-btn" onClick={this.handleClick} />
       </div>
