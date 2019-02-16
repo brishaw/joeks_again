@@ -1,0 +1,20 @@
+
+.middle h2 {
+  transform: rotate(-7deg);
+  -webkit-transform: rotate(-7deg);
+  text-shadow: 2px 2px #000000;
+  filter: drop-shadow(0 0 0.75rem #eeff00);
+  -webkit-filter: drop-shadow(0 0 0.75rem #eeff00);
+  font-size: 3.3rem;
+  text-align: center;
+  color: #ff0000;
+}
+
+.middle p {
+  font-size: 1.7rem;
+}
+
+.middle .joke-btn {
+  margin: 0 auto;
+  display: block;
+}

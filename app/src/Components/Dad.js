@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Styles/Dad.css';
 import axios from 'axios';
 
 class Dad extends Component {
@@ -17,11 +18,28 @@ class Dad extends Component {
       .catch(error => console.log(error));
   }
 
+  handleClick = (e) => {
+    e.preventDefault();
+    this.setState({
+      question: ''
+    })
+
+    axios.get('/api/dadjokes')
+      .then(response => {
+        this.setState({
+          question: response.data.joke
+        })
+      })
+      .catch(error => console.log(error));
+
+  }
+
   render() {
     return (
       <div className="middle">
-        <p>The Dad Jokes</p>
+        <h2>The Dad Jokes</h2>
         <p>{this.state.question}</p>
+        <button className="joke-btn" onClick={this.handleClick} />
       </div>
     )
   }
