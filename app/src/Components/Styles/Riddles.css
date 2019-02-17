@@ -1,34 +1,31 @@
 .right h3 {
-    filter: drop-shadow(0 0 5px #ff9900);
-    -webkit-filter: drop-shadow(0 0 5px #ff9900);
-    text-shadow: 1px 1px 0px #ffffff;
-    transform: rotate(-3deg);
-    -webkit-transform: rotate(-3deg);
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.right.box {
-  /* border-radius: 20px 0 0 20px; */
-  border-right: 10px solid #222222;
-}
-
-.riddle-answer-box {
+.right p:first-of-type {
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
   height: auto;
-  padding: 10px;
-  display: block;
-  margin-bottom: 20px;
-  border: 1px solid #222222;
-  text-align: center;
-  line-height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 20px 20px;
 }
 
-.riddle-answer-box::after {
-  content: "Hover for answer!";
-}
-
-.riddle-answer-box:hover + .riddle-answer {
-  display: block;
-}
-
-.riddle-answer {
-  display: none;
+.right p.riddle-answer{
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 20px 20px;
 }

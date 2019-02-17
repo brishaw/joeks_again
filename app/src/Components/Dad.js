@@ -36,7 +36,7 @@ class Dad extends Component {
 
   render() {
     return (
-      <div className="middle">
+      <div className="middle box">
         <h2>The Dad Jokes</h2>
         <p>{this.state.question}</p>
         <button className="joke-btn" onClick={this.handleClick} />

@@ -1,12 +1,20 @@
 .left h3 {
-    filter: drop-shadow(0 0 5px #ff9900);
-    -webkit-filter: drop-shadow(0 0 5px #ff9900);
-    text-shadow: 1px 1px 0px #ffffff;
-    transform: rotate(-3deg);
-    -webkit-transform: rotate(-3deg);
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.left.box {
-  /* border-radius: 0 20px 20px 0; */
-  border-left: 10px solid #222222;
+.left p {
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 20px 20px;
 }

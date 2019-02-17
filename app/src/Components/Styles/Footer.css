@@ -1,11 +1,4 @@
 .footer {
-  background-color: #222222;
-  width: 100%;
-  height: 25px;
-}
-
-.footer .container {
-  width: auto;
-  max-width: 980px;
-  padding: 0 15px;
+  background-color: lightblue;
+  padding: 30px;
 }
