@@ -28,4 +28,9 @@
   justify-content: center;
   align-items: center;
   padding: 20px 0 20px 20px;
+  visibility: hidden;
+}
+
+.reveal::after {
+  content: "Click for Answer";
 }

@@ -40,12 +40,17 @@ class Riddles extends Component {
       .catch(error => console.log(error));
   }
 
+  // showAnswer = (e) => {
+  //   e.preventDefault();
+  //   document.getElementById("reveal").style.visibility = "visible";
+  // }
+
   render() {
     return (
       <div className="right box">
         <h3>A Riddle</h3>
         <p>{this.state.question}</p>
-        <div className="riddle-answer-box"></div>
+        <button id="reveal" className="joke-btn">{this.showAnswer}</button>
         <p className="riddle-answer">{this.state.answer}</p>
         <button className="joke-btn" onClick={this.handleClick} />
       </div>
