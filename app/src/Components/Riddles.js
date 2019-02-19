@@ -38,20 +38,24 @@ class Riddles extends Component {
         })
       })
       .catch(error => console.log(error));
+      document.getElementById("riddleAnswer").style.visibility = "hidden";
   }
 
-  // showAnswer = (e) => {
-  //   e.preventDefault();
-  //   document.getElementById("reveal").style.visibility = "visible";
-  // }
+  showAnswer = (e) => {
+    e.preventDefault();
+    console.log("clicked");
+    document.getElementById("riddleAnswer").style.visibility = "visible";
+  }
+
+  
 
   render() {
     return (
       <div className="right box">
         <h3>A Riddle</h3>
         <p>{this.state.question}</p>
-        <button id="reveal" className="joke-btn">{this.showAnswer}</button>
-        <p className="riddle-answer">{this.state.answer}</p>
+        <button className="joke-btn reveal" onClick={this.showAnswer}></button>
+        <p id="riddleAnswer" className="riddle-answer">{this.state.answer}</p>
         <button className="joke-btn" onClick={this.handleClick} />
       </div>
     )

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 .right h3 {
   border-top: 1px solid #000;
   border-left: 1px solid #000;
@@ -31,6 +33,12 @@
   visibility: hidden;
 }
 
-.reveal::after {
-  content: "Click for Answer";
+.right p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  line-height: 27px;
+}
+
+.right .reveal::after {
+  content: "Click for Answer!"
 }

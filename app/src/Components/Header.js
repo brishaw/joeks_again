@@ -5,7 +5,7 @@ class Header extends Component {
 
   render() {
     return (
-      <header className="header py-3"></header>
+      <header className="header"></header>
     )
   }
 }
