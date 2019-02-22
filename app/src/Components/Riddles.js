@@ -53,10 +53,10 @@ class Riddles extends Component {
     return (
       <div className="right box">
         <h3>A Riddle</h3>
+        <button className="joke-btn" onClick={this.handleClick} />
         <p>{this.state.question}</p>
         <button className="joke-btn reveal" onClick={this.showAnswer}></button>
         <p id="riddleAnswer" className="riddle-answer">{this.state.answer}</p>
-        <button className="joke-btn" onClick={this.handleClick} />
       </div>
     )
   }

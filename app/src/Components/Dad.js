@@ -38,8 +38,9 @@ class Dad extends Component {
     return (
       <div className="middle box">
         <h3>The Dad Jokes</h3>
-        <p>{this.state.question}</p>
         <button className="joke-btn" onClick={this.handleClick} />
+        <p>{this.state.question}</p>
+        
       </div>
     )
   }

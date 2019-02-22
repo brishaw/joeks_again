@@ -1,10 +1,10 @@
-h1, h2, h3, h4, footer .container {
+h1, h2, h3, h4, .header .container, .footer .container {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
   font-weight: 300;
-  border-left: 2px solid #78ff23;
+  border-left: 2px solid #23abff;
   align-items: center;
-  filter: drop-shadow(0px 0px 7px #78ff23);
+  filter: drop-shadow(0px 0px 7px #23abff);
   color: #fff;
   letter-spacing: -1.27px;
 }
@@ -21,16 +21,14 @@ p {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.App {
-  background-image: url('../Images/header.jpg');
+  background-image: url('../Images/bg_1.jpg');
   background-size: cover;
   background-position: top center;
 }
 
 .header, .footer {
   flex-shrink: 0;
+  background-color: rgba(0,0,0,.57);
 }
 
 .content {
@@ -50,14 +48,20 @@ p {
   align-items: center;
   justify-content: center;
   padding: 15px 20px;
-  background-color: #c7c7c7;
-  border: 0;
+  background-color: rgba(255,255,255,.17);
+  border: 1px solid rgba(33, 150, 243, 0.21);
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .joke-btn::after {
-  content: "One More...";
+  content: "Another One!";
   font-size: 1.2rem;
+}
+
+.joke-btn:hover {
+  background-color: rgba(255,255,255,.27);
+  transition: 300ms ease all;
 }
 
 @media (max-width: 500px) {
@@ -65,7 +69,6 @@ p {
   .content {
     display: grid;
     -ms-display: grid;
-    background: url('../Images/norris_left.jpg');
   }
 
   .content .left.box {

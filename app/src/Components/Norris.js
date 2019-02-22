@@ -42,8 +42,9 @@ class Norris extends Component {
     return (
       <div className="left box">
         <h3>Chuck Norris Jokes</h3>
-        <p>{this.state.question}</p>
         <button className="joke-btn" onClick={this.handleClick} />
+        <p>{this.state.question}</p>
+        
       </div>
     )
   }
