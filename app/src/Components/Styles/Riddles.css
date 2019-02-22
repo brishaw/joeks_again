@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 .right h3 {
-  border-top: 1px solid #000;
+  /* border-top: 1px solid #000;
   border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000; */
   height: 50px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .right p:first-of-type {
-  border-top: 1px solid #000;
+  /* border-top: 1px solid #000;
   border-right: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000; */
   height: auto;
   display: flex;
   justify-content: center;
@@ -22,9 +22,9 @@
 }
 
 .right p.riddle-answer{
-  border-top: 1px solid #000;
+  /* border-top: 1px solid #000;
   border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000; */
   height: auto;
   display: flex;
   justify-content: center;

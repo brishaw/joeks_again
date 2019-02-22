@@ -1,17 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Forum');
 
-
-
 .middle.box {
   width: 45%;
 }
 
-.middle h2 {
-  border: 1px solid #000;
+.middle h3 {
+  /* border: 1px solid #000; */
   height: 50px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .middle p {
@@ -20,7 +18,7 @@
 }
 
 .middle p {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   height: auto;
   display: flex;
   justify-content: center;
