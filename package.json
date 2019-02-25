@@ -8,6 +8,7 @@
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"node server.js\" \"cd app && yarn start\"",
+    "seed": "node scripts/seed.js",
     "heroku-postbuild": "cd app && npm install && npm run build"
   },
   "repository": {
@@ -22,9 +23,12 @@
   "homepage": "https://github.com/brishaw/joeks_again#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.4",
     "if-env": "^1.0.4",
+    "mongoose": "^5.4.15",
+    "morgan": "^1.9.1",
     "nodemon": "^1.18.10",
     "path": "^0.12.7"
   },

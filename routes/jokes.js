@@ -3,6 +3,9 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const jokeController = express.Router();
 
+const jokesController = require('../controllers/jokesController');
+
+
 console.log('joke controller is running...');
 
 jokeController.route('/test')
@@ -100,5 +103,17 @@ jokeController.route('/riddles')
         console.log(error);
       })
   })
+
+// Matches with "/api/books"
+jokeController.route("/jokes")
+  .get(jokesController.findAll)
+  .post(jokesController.create);
+
+// Matches with "/api/books/:id"
+jokeController
+  .route("/:id")
+  .get(jokesController.findById)
+  .put(jokesController.update)
+  .delete(jokesController.remove);
 
   module.exports = jokeController;

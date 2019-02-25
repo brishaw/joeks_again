@@ -6,6 +6,8 @@ import Dad from './Components/Dad';
 import Norris from './Components/Norris';
 import Footer from './Components/Footer';
 
+import Dashboard from './Components/Dashboard';
+
 
 class App extends Component {
 
@@ -14,6 +16,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="content">
+          <Dashboard />
           <Norris />
           <Dad />
           <Riddles />
