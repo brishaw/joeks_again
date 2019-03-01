@@ -13,7 +13,23 @@
   
 }
 
-textarea.form-control {
+textarea.joke-box {
+  width: 70%;
+  height: 70px;
+  padding: 20px;
+  margin: 20px auto;
+  display: block;
+}
+
+textarea.punchline-box {
+  width: 70%;
+  height: 50px;
+  padding: 20px;
+  margin: 20px auto;
+  display: block;
+}
+
+input.form-control {
   width: 70%;
   height: auto;
   padding: 20px;

@@ -4,13 +4,15 @@ import React, { Component } from "react";
 import API from "../utils/API";
 // import { Link } from "react-router-dom";
 
-import { TextArea, FormBtn } from "../Components/Form";
+import { Input, TextArea, FormBtn } from "../Components/Form";
 import './Styles/Jokes.css';
 
 class Jokes extends Component {
   state = {
     jokes: [],
-    newjoke: ""
+    author: "",
+    newjoke: "",
+    punchline: ""
   };
 
   componentDidMount() {
@@ -20,7 +22,7 @@ class Jokes extends Component {
   loadJoke = () => {
     API.getJoke()
       .then(res =>
-        this.setState({ jokes: res.data, newjoke: "" })
+        this.setState({ jokes: res.data, author: "", newjoke: "", punchline: "" })
       )
       .catch(err => console.log(err));
   };
@@ -40,9 +42,11 @@ class Jokes extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.newjoke) {
+    if (this.state.author && this.state.newjoke) {
       API.saveJoke({
-        newjoke: this.state.newjoke
+        author: this.state.author,
+        newjoke: this.state.newjoke,
+        punchline: this.state.punchline
       })
         .then(res => this.loadJoke())
         .catch(err => console.log(err));
@@ -54,11 +58,25 @@ class Jokes extends Component {
       <div>
 
             <form>
+              <Input 
+                value={this.state.author}
+                onChange={this.handleInputChange}
+                name="author"
+                placeholder="Your name (required)"
+              />
               <TextArea
+                className="joke-box"
                 value={this.state.newjoke}
                 onChange={this.handleInputChange}
                 name="newjoke"
                 placeholder="Joke (required)"
+              />
+              <TextArea
+                className="punchline-box"
+                value={this.state.punchline}
+                onChange={this.handleInputChange}
+                name="punchline"
+                placeholder="Punchline"
               />
               {/* <TextArea
                 value={this.state.synopsis}

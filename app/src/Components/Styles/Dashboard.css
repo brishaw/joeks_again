@@ -8,6 +8,7 @@
 }
 
 .modal-main {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
   position: fixed;
   background: white;
   width: 80%;
@@ -15,6 +16,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+p.be-nice {
+  width: 70%;
+  margin: 20px auto;
+  color: #222222;
 }
 
 .display-block {
@@ -30,4 +37,26 @@
   position: absolute;
   top: 0;
   right: 0;
+  padding: 7px 11px;
+  border: none;
+  color: #ffffff;
+  font-size: .77rem;
+  font-weight: bolder;
+  background-color: #23abff;
+}
+
+.modal-open {
+  /* margin: 0 auto; */
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 15px 20px;
+  background-color: rgba(255,255,255,.17);
+  border: 1px solid rgba(33, 150, 243, 0.21);
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.2rem;
 }

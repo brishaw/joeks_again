@@ -27,8 +27,8 @@ class Dashboard extends Component {
             <Route exact path="/books/:id" component={Detail} />
           </Switch>
         </Modal>
-        <button type="button" onClick={this.showModal}>
-          open
+        <button className="modal-open" type="button" onClick={this.showModal}>
+          Submit your joke!
         </button>
       </div>
       </Router>
@@ -42,6 +42,7 @@ const Modal = ({ handleClose, show, children }) => {
   return (
     <div className={showHideClassName}>
       <section className="modal-main">
+        <p className="be-nice">Submit your own funny joke, not ones that are hurtful or mean. I do filter - and mean jokes will not be published.</p>
         {children}
         <button className="modal-close" onClick={handleClose}>X</button>
       </section>

@@ -17,6 +17,10 @@ p {
   color: #ffffff;
 }
 
+button {
+  font-family: 'Poppins', sans-serif !important;
+}
+
 .App {
   min-height: 100vh;
   display: flex;
