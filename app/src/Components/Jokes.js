@@ -71,13 +71,13 @@ class Jokes extends Component {
                 name="newjoke"
                 placeholder="Joke (required)"
               />
-              <TextArea
+              {/* <TextArea
                 className="punchline-box"
                 value={this.state.punchline}
                 onChange={this.handleInputChange}
                 name="punchline"
                 placeholder="Punchline"
-              />
+              /> */}
               {/* <TextArea
                 value={this.state.synopsis}
                 onChange={this.handleInputChange}
