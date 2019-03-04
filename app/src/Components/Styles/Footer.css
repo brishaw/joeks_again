@@ -1,7 +1,6 @@
 .footer {
   padding: 30px;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
 }
 
 .footer .container {
@@ -11,5 +10,6 @@
   align-items: center;
   justify-content: center;
   border-left: 0;
+  font-size: 1.2rem;
   color: #72768c;
 }

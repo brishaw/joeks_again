@@ -5,6 +5,7 @@ console.log("at submitted");
 
 class Submitted extends Component {
   state = {
+    author: '',
     subJoke: '',
     subPunchline: ''
   }
@@ -19,6 +20,7 @@ class Submitted extends Component {
         let i = Math.floor((Math.random() * response.data.length) + 0);
         console.log(i);
         this.setState({
+          author: response.data[i].author,
           subJoke: response.data[i].newjoke
         })
       })
@@ -29,8 +31,8 @@ class Submitted extends Component {
 
     return (
 
-      <div>
-        <p>Random User Submitted Joke!</p>
+      <div className="submitted-joke">
+        <h3>Submitted Joke by - {this.state.author}</h3>
         <p>{this.state.subJoke}</p>
       </div>
     )
